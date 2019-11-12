@@ -4,8 +4,8 @@
 
 <div class="profile__bg {{ 'profile__bg--valid' if valid else ''}}">
     <div class="profile__block">
-        <img src="{{ profile.image.url }}" alt="{{ profile.displayName }}" class="profile__img">
-        <div class="profile__name">{{ profile.displayName }}</div>
+        <img src="{{ profile.image }}" alt="{{ profile.name }}" class="profile__img">
+        <div class="profile__name">{{ profile.name }}</div>
         <div class="profile__status {{ 'profile__status--valid' if valid else 'profile__status--invalid' }}">
             {% if valid %}
                 <i class="fas fa-check"></i>
