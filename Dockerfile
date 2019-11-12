@@ -8,4 +8,4 @@ RUN apk add make
 RUN pip install -r requirements.txt
 
 EXPOSE 5000
-CMD make run
+CMD make prod
