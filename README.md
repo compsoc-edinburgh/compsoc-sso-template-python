@@ -41,4 +41,4 @@ $ make run
 
 # who?
 
-This was written in a fit of procrastination by @pkage.
+This was written in a fit of procrastination by [@pkage](//kage.dev).
