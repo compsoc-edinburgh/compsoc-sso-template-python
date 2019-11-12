@@ -18,8 +18,8 @@ More verbosely:
 
 2) Once you've created the project, go to the sidebar > APIs & Services > Credentials. You'll need to add routes like so:
 
-![docs/credentials.png]
-![docs/routes.png]
+![credentials](/docs/credentials.png?raw=true)
+![routes](/docs/routes.png?raw=true)
 
 3) You'll also need to enable access to the People API, which is used to retrieve a profile photo and other information. This can be done through the sidebar > APIs & Services > Library portal.
 
