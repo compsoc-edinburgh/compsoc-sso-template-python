@@ -17,7 +17,7 @@ app.register_blueprint(blueprint, url_prefix='/login')
 
 # magic happens here
 def email_valid(email):
-    if email.endswith('@comp-soc.com') or email.endswith('@hacktheburgh.com'):
+    if email.endswith('@comp-soc.com') or email.endswith('@hacktheburgh.com') or email.endswith('@sigint.mx'):
         return True
     return False
 
