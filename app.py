@@ -49,8 +49,8 @@ def logout():
 def profile():
     if not google.authorized:
         return redirect(url_for('google.login'))
-    print(dir(google.get))
-    print('google token: {}'.format(google.token[u'access_token']))
+    # print(dir(google.get))
+    # print('google token: {}'.format(google.token[u'access_token']))
     resp = requests.get(
             'https://people.googleapis.com/v1/people/me',
             params={
