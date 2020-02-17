@@ -1,9 +1,15 @@
-# compsoc committee sso
+# compsoc committee sso framework
 
 ## what?
 
-This is a tool to allow compsoc committee members to sign into internal applications, using our existing google admin platform.
+This is a template project to demonstrate allowing compsoc committee members to sign into internal applications, using our existing google admin platform.
 It also ships with a *highly opinionated* Flask framework, for easily building and deploying new CompSoc microservices, through some makefile abuse.
+
+This template ships with:
+
+ - [Flask](//palletsprojects.com/p/flask/)
+ - [Bulma](//bulma.io)
+ - [SQLite](https://www.sqlite.org/index.html)
 
 ## why?
 
@@ -47,7 +53,7 @@ Then you should be good to go! Start the server with:
 $ make run
 ```
 
-## deploying
+### deploying?
 
 Deploying the application is slightly more involved than just running it, but it's not horrendously complicated either.
 
@@ -79,6 +85,23 @@ Obtain a certificate for free (thanks [Let's Encrpyt](//letsencrypt.org)!) by ru
 ```
 $ sudo certbot
 ```
+
+## make?
+
+That's right, this absolutely abuses make.
+
+Make commands available are:
+
+command | stage | effect
+---|---|---
+`init-venv` | *dev* | create a virtual environment
+`run` | *dev* | __start the local dev server__
+`init-db` | *dev* | clear and initialize the database by running `app/schema.sql`
+`clean` | *deploy* | clean up the last build if necessary
+`build` | *deploy* | build the docker image
+`upload` | *deploy* | upload the image to the server
+`init-deploy` | *deploy* | prepare the server to receive deployments
+`connect` | *maintain* | connect to the server for convenience
 
 ## who?
 
