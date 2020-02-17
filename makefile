@@ -23,10 +23,12 @@ init-db:
 clean:
 	rm -f ${STAGING}/${DOCKER_TAG_NAME}.tar.gz
 
-upload: clean
+build: clean
 	mkdir -p ${STAGING}
 	docker build . -t ${DOCKER_TAG_NAME}
 	docker save ${DOCKER_TAG_NAME} -o ${STAGING}/${DOCKER_TAG_NAME}.tar.gz
+
+upload: build
 	scp ${STAGING}/${DOCKER_TAG_NAME}.tar.gz ${REMOTE}:${REMOTE_DESTINATION}/${DOCKER_TAG_NAME}.tar.gz
 
 connect:
@@ -46,5 +48,3 @@ init-venv:
 	source ${VIRTUALENV}/bin/activate && \
 		python -m pip install -r requirements.txt --verbose
 
-prod:
-	FLASK_DEBUG=0 python -m flask run
