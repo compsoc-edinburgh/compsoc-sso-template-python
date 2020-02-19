@@ -24,12 +24,6 @@ def register_google_bp(app):
     app.register_blueprint(google_bp, url_prefix='/login')
 
 
-# magic happens here
-def email_valid(email):
-    if email.endswith('@comp-soc.com') or email.endswith('@hacktheburgh.com') or email.endswith('@sigint.mx'):
-        return True
-    return False
-
 @bp.route('/')
 def index():
     if google.authorized:
