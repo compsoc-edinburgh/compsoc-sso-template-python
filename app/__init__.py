@@ -3,6 +3,7 @@ import os
 import json
 from werkzeug.middleware.proxy_fix import ProxyFix
 
+
 def create_app(test_config=None):
     """Create and configure an instance of the Flask application."""
 
@@ -50,4 +51,10 @@ def create_app(test_config=None):
     return app
 
 
-
+def create_socket_app():
+    # alternative entry point to strap in websocket support
+    app = create_app()
+    from flask_socketio import SocketIO
+    
+    # some imports here
+    return SocketIO(app)

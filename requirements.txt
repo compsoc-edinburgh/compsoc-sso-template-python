@@ -2,3 +2,7 @@ flask
 Flask-Dance
 flask_cors
 requests
+
+# socketio
+flask-socketio
+eventlet
