@@ -10,6 +10,7 @@ This template ships with:
  - [Flask](//palletsprojects.com/p/flask/)
  - [Bulma](//bulma.io)
  - [SQLite](https://www.sqlite.org/index.html)
+ - [socket.io](//socket.io) *(experimental)*
 
 ## why?
 
@@ -27,6 +28,22 @@ More verbosely:
 
 ![credentials](/docs/credentials.png?raw=true)
 ![routes](/docs/routes.png?raw=true)
+
+Here are the authorized javascript origins so you can copy/paste them:
+
+```
+https://your-service.comp-soc.com/
+http://localhost:5000/
+http://127.0.0.1:5000/
+```
+
+And similarly for the authorized redirect URIs:
+
+```
+https://your-service.comp-soc.com/login/google/authorized
+http://localhost:5000/login/google/authorized
+http://127.0.0.1:5000/login/google/authorized
+```
 
 3) You'll also need to enable access to the People API, which is used to retrieve a profile photo and other information. This can be done through the sidebar > APIs & Services > Library portal.
 
