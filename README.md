@@ -32,9 +32,9 @@ More verbosely:
 Here are the authorized javascript origins so you can copy/paste them:
 
 ```
-https://your-service.comp-soc.com/
-http://localhost:5000/
-http://127.0.0.1:5000/
+https://your-service.comp-soc.com
+http://localhost:5000
+http://127.0.0.1:5000
 ```
 
 And similarly for the authorized redirect URIs:
